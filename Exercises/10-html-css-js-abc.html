@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 HTML CSS JS Together Exercises</title>
+
+    <style>
+        .add-to-cart-button {
+            margin-bottom: 60px;
+            background-color: rgb(255, 216, 20);
+            color: black;
+            border: none;
+            border-radius: 23px;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 8px 25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- lesson 10 HTML,CSS,JS -->
+     <p>10a</p>
+     <button class="add-to-cart-button">Add to Cart</button>
+     <p>10c</p>
+     <button class="js-button" onclick="doClassExist()">Text</button>
+
+    <script>
+        // lesson 10 HTML,CSS,JS
+
+            // 10c
+            function doClassExist() {
+                console.log(document.querySelector('.js-button').classList.contains('js-button'));
+            }
+    </script>
+</body>
+</html>

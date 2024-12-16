@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Cart Feature</title>
+</head>
+<body>
+    <p>
+        Cart Quantity
+    </p>
+    <button onclick="console.log('Cart quantity: ' + cartValue)">
+        Show Quantity
+    </button>
+    <button onclick="
+    if (cartValue + 1 > 10) {
+        alert(`cart is full can't update.`);
+    } else {
+        cartValue += 1;
+    }
+    console.log('Cart quantity: ' + cartValue);">
+        Add to Cart
+    </button>
+    <button onclick="
+    if (cartValue + 2 > 10) {
+        alert(`cart is full, can't update`);
+    } else {
+        cartValue += 2;
+    }
+    console.log('Cart quantity: ' + cartValue);">
+        +2
+    </button>
+    <button onclick="
+    if ((cartValue + 3) >= 11) {
+        alert(`cart is full, can't update`);
+    } else {
+        cartValue += 3;
+    }
+    console.log('Cart quantity: ' + cartValue);">
+        +3
+    </button>
+    <button onclick="
+        console.log('Cart was reset');
+        cartValue = 0;
+        console.log('Cart quantity: ' + cartValue);">
+        Reset Cart
+    </button>
+    <script>
+        let cartValue = 0;
+    </script>
+</body>
+</html>

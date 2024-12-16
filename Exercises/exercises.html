@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Course Exercises</title>
+
+    <style>
+        .on-button {
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 8px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0px 10px;
+            cursor: pointer;
+        }
+        .off-button {
+            background-color: rgb(240, 240, 240);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        This is a practice page for JavaScript Course by SuperSimpleDev.
+    </h1>
+
+    <!-- lesson 9 DOM  -->
+    <!-- 9c -->
+     <!-- <button onclick="displayChoice('Heads')">Heads</button>
+     <button onclick="displayChoice('Tails')">Tails</button>
+     <p class="js-playerChoice"></p> -->
+    <!-- 9d -->
+     <!-- <input type="text" placeholder="Name" class="js-name-input" onkeyup="
+        if (event.key === 'Enter') {
+            displayName();
+        }">
+     <button onclick="displayName()">Submit</button>
+     <p class="js-name-para"></p> -->
+    <!-- 9g -->
+     <!-- <input type="number" placeholder="Cost" class="js-cost-input">
+     <button onclick="calculation()">Calculate</button>
+     <p class="js-finalCost"></p> -->
+    <!-- 9h -->
+     <!-- <input type="text" class="js-instant-text-input" onkeyup="displayText()">
+     <p class="js-text-display"></p> -->
+
+    <!-- lesson 10 HTML,CSS,JS -->
+     <!-- 10c -->
+      <button class="js-button">Text</button>
+     <!-- 10d,e -->
+      <button class="js-on-off-button on-button" onclick="onOff('js-on-off-button')">Gameing</button>
+      <button class="js-on-off-button on-button" onclick="onOff('js-on-off-button')">Music</button>
+      <button class="js-on-off-button on-button" onclick="onOff('js-on-off-button')">Tech</button>
+
+    <script>
+        // lesson 10 HTML,CSS,JS
+            // 10c
+            // console.log(document.querySelector('.js-button').classList.contains('js-button'));
+            // 10d,e
+            function onOff(className) {
+                if (document.querySelector(`.${className}`).classList.contains('off-button')) {
+                    document.querySelector(`.${className}`).classList.remove('off-button');
+                } else {
+                    document.querySelector(`.${className}`).classList.add('off-button');
+                }
+            }
+        
+            
+        // // lesson 9 DOM
+        //     // 9c
+        //     function displayChoice(face) {
+        //         if (face === 'Heads') {
+        //             document.querySelector('.js-playerChoice').innerHTML = 'You chose: heads';
+        //         } else if ('face it 1 Thierjwkii') {
+        //             document.querySelector('.js-playerChoice').innerHTML = 'You chose: tails';
+        //         }
+        //     }
+        //     // 9d
+        //     function displayName() {
+        //         const inputNameElement = document.querySelector('.js-name-input').value;
+        //         if (inputNameElement === '') {
+        //             document.querySelector('.js-name-para').innerHTML = `Please enter your name above!`;
+        //             return;    
+        //         }
+        //         document.querySelector('.js-name-para').innerHTML = `Your name is: ${inputNameElement}`;
+        //     }
+        //     // 9g
+        //     function calculation() {
+        //         const inputCostElement = document.querySelector('.js-cost-input').value;
+        //         if (inputCostElement === '') {
+        //             document.querySelector('.js-finalCost').innerHTML = 'Enter the product cost';
+        //             return;
+        //         }
+        //         let finalCost = 0;
+        //         if (Number(inputCostElement*100 < 4000)) {
+        //             finalCost = Number(inputCostElement)*100 + 1000;
+        //         } else {
+        //             finalCost = Number(inputCostElement)*100;
+        //         }
+        //         finalCost /= 100;
+        //         document.querySelector('.js-finalCost').innerHTML = `$${finalCost}`;
+        //     }
+        //     // 9h            
+        //     function displayText() {
+        //         document.querySelector('.js-text-display').innerHTML = document.querySelector('.js-instant-text-input').value;
+        //     }
+
+        
+        // lesson 8 Objects
+            // // 8a,b,c
+            // const product1 = {
+            //     name : 'Basketball',
+            //     price : 550
+            // }
+            // product1.price += 20;
+            // product1['delivery-time'] = '3-days';
+            // console.log(product1);
+            // // 8e,d
+            // const product2 = {
+            //     name :'Basketball',
+            //     price : 540,
+            //     ['delivery-time'] : '3-days' 
+            // }
+            // function compareProducts(product1, product2) {
+            //     if (product1.name === product2.name && product1.price === product2.price) {
+            //         if (product1['delivery'] === product2['delivery']) {    
+            //             console.log('Both are same.');
+            //             return;
+            //         }
+            //     }
+            //     console.log('They are not same.');
+            // }
+            // compareProducts(product1, product2);
+            // // 8f,g
+            // const string1 = 'GOOD MORNING!'
+            // console.log(string1.repeat(2));
+            // console.log(string1.toLowerCase());
+
+        // lesson 7 functions
+            // // 7a,b,c
+            // function greet(name = 'there') {
+            //     console.log(`Hello ${name}!`);
+            // }
+            // greet('Tejas');
+            // // 7d
+            // function convertToFahrenheit(celsius) {
+            //     const fahrenheit = (celsius*9/5)+32;
+            //     console.log(`${celsius}C is ${fahrenheit}F`);
+            // }
+            // // 7e
+            // function convertToCelsius(fahrenheit) {
+            //     const celsius = (fahrenheit-32)*5/9;
+            //     console.log(`${fahrenheit}F is ${celsius}C`)
+            // }
+            // // 7f
+            // function convertTemperature(degree, unit) {
+            //     if (unit === 'C' || unit === 'c') {
+            //         convertToFahrenheit(degree);
+            //     }
+            //     else if (unit === 'F' || unit === 'f') {
+            //         convertToCelsius(degree);
+            //     }
+            //     else {
+            //         console.log('invailid conversion');
+            //     }
+            // }
+            // convertTemperature(140, 'f');
+            // convertTemperature(32, 'c');
+
+        // lesson 6 Boolean, If statements
+            // // 6a
+            // let hour = 20;
+            // if (6 < hour && hour < 12) {
+            //     console.log('Good Morning!');
+            // } else if (13 < hour && hour < 17) {
+            //     console.log('Good Afternoon!');
+            // } else {
+            //     console.log("Good Night!");
+            // }
+            // // 6b
+            // hour = 10;
+            // if (6 < hour && hour < 12) {
+            //     console.log('Good Morning!');
+            // } else if (13 < hour && hour < 17) {
+            //     console.log('Good Afternoon!');
+            // } else {
+            //     console.log("Good Night!");
+            // }
+            // // 6c
+            // hour = 10;
+            // const name = 'Tejas'
+            // if (6 < hour && hour < 12) {
+            //     console.log(`Good Morning! ${name}`);
+            // } else if (13 < hour && hour < 17) {
+            //     console.log(`Good Afternoon! ${name}`);
+            // } else {
+            //     console.log(`Good Night! ${name}`);
+            // }
+
+
+    </script>    
+</body>
+</html>
