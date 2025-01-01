@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Arrays and Loops Exercise t</h2>
+    
+    <script>
+        let eggCount = 0;
+        function removeEgg(food) {
+            eggLess = [];
+            for (let i = 0; i < food.length; i++) { 
+                if (food[i] === 'egg' && eggCount < 2) {
+                    eggCount++;
+                    continue;
+                }
+                else {
+                    eggLess.push(food[i]);
+                }
+            }
+            return eggLess;
+        }
+        console.log(removeEgg(['egg','apple','egg','egg','ham'].reverse()))
+    </script>
+</body>
+</html>
