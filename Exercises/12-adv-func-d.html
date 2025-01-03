@@ -10,21 +10,6 @@
 
     <button class="js-button" onclick="changeText()">Start</button>
 
-    <script>
-        let flag = 0;
-        function changeText() {
-            const buttonElement = document.querySelector('.js-button');
-            setTimeout(function() {
-                if (flag % 2 === 0) {
-                    buttonElement.innerHTML = 'Finished!';
-                    flag++;
-                } else if (flag % 2 === 1) {
-                    buttonElement.innerHTML = 'Start';
-                    flag--;
-                }
-            },1000);
-            buttonElement.innerHTML = 'loading...';
-        }
-    </script>
+    <script src="Script/12-adv-func-d.js"></script>
 </body>
 </html>
