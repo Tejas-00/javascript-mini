@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="styles/advanced-function.css">
 </head>
 <body>
     <h2>advanced function Rock Paper Scissors</h2>
@@ -30,5 +32,11 @@
         class="reset-score-button">
         Reset score
     </button>
+    <button class="auto-play-button js-auto-play-button"
+    onclick="setInterval(autoPlay(),1)">
+        Auto Play
+    </button>
+
+    <script src="scripts/advanced-function.js"></script>
 </body>
 </html>
