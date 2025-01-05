@@ -1,4 +1,32 @@
 let score = JSON.parse(localStorage.getItem('score'));
+
+const rockButtonElem = document.querySelector('.js-rock-button');
+rockButtonElem.addEventListener('click', () => playGame('rock')) 
+
+const paperButtonElem = document.querySelector('.js-paper-button');
+paperButtonElem.addEventListener('click', () => playGame('paper')) 
+
+const scissorsButtonElem = document.querySelector('.js-scissors-button');
+scissorsButtonElem.addEventListener('click', () => playGame('scissors')) 
+
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'r' || event.key === 'R') {
+        playGame('rock');
+    } else if (event.key === 'p' || event.key === 'P') {
+        playGame('paper');
+    } else if (event.key === 's' || event.key === 'S') {
+        playGame('scissors');
+    }
+})
+
+document.querySelector('.js-reset-button')
+    .addEventListener('click', () => {
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        updateScore();
+    })
+
 if (score === null) {
     score = {
         wins:0,
