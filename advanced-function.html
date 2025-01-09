@@ -24,18 +24,16 @@
     <p class="js-movePlayed"></p>
     <p class="js-score score"></p>
 
-    <button onclick="
-        score.wins = 0;
-        score.losses = 0;
-        score.ties = 0;
-        updateScore()"
-        class="reset-score-button">
+    <button class="reset-score-button js-reset-score-button">
         Reset score
     </button>
+
     <button class="auto-play-button js-auto-play-button"
     onclick="setInterval(autoPlay(),1)">
         Auto Play
     </button>
+
+    <div class="js-reset-permission-div"></div>
 
     <script src="scripts/advanced-function.js"></script>
 </body>

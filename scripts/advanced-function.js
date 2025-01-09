@@ -72,6 +72,23 @@ function updateScore() {
 }
 updateScore();
 
+function resetPermission() {
+    document.querySelector('.js-reset-permission-div').innerHTML = `
+        <button>Yes</button>
+        <button>No</button>
+    `;
+}
+document.querySelector('.js-reset-score-button')
+    .addEventListener('click', resetPermission());
+
+// document.querySelector('.js-reset-score-button')
+//     .addEventListener('click',() => {
+//         score.wins = 0;
+//         score.losses = 0;
+//         score.ties = 0;
+//         updateScore();
+//     })
+
 let isAutoPlaying = false;
 let intervalId;
 function autoPlay() {
